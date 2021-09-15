@@ -127,7 +127,10 @@ class DataAccess:
         """Returns available raw profile from blob storage
 
         :param str grid_model: grid model.
-        :param str kind: *'demand'*, *'hydro'*, *'solar'* or *'wind'*.
+        :param str kind: *'demand'*, *'hydro'*, *'solar'*, *'wind'*,
+            *'demand_flexibility_up'*, *'demand_flexibility_dn'*,
+            *'demand_flexibility_duration'*, *'demand_flexibility_cost_up'*,
+            or *'demand_flexibility_cost_dn'*.
         :return: (*list*) -- available profile version.
         """
         blob_version = get_profile_version_cloud(grid_model, kind)
